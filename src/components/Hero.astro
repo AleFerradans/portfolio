@@ -1,0 +1,71 @@
+---
+import Header from './Header.astro'
+---
+<main class="flex flex-col justify-center gap-y-28 sm:gap-y-96 md:gap-y-30 lg:gap-y-36 2xl:gap-y-44 h-full relative overflow-hidden">
+    <Header/>
+
+    <!-- Hero -->
+    <section class="flex items-start flex-col flex-wrap gap-x-14 md:justify-center justify-start">
+
+        <div class="relative lg:pl-[8%] md:mb-10 pl-[8%]">
+            <h2 class="font-roboto font-black text-secondary text-5xl lg:text-9xl md:text-8xl tracking-tight leading-0.5 selection:bg-transparent selection:text">Front <span class="text-5xl lg:text-8xl md:text-8xl text-secondary font-medium font-playfair selection:bg-primary">end</span></h2>
+            <p id="stroke" class="font-geist text-5xl lg:text-9xl md:text-8xl font-black selection:bg-transparent">Developer</p>
+
+            <img class="absolute left-[84%] top-[-4%] md:left-[82%] md:top-0 md:scale-125 lg:top-0 lg:left-[75%] opacity-45 scale-95 lg:scale-150 z-30 rotate-12" src="../../public/Ilustracion1.svg" alt="">
+        </div>
+    
+        <div class="w-auto md:w-[70%] md:ml-[30%] md:px-10 lg:w-[60%] lg:mt-5 lg:ml-[38%] px-[8%]">
+            <p class="font-geist text-lg md:text-2xl lg:text-2xl font-thin text-description mt-10 selection:bg-primary"> Hello there — I'm a <span id="underline" class="font-playfair font-normal text-primary text-lg lg:text-2xl lg:underline selection:text-secondary">creative front-end</span> developer based in Montevideo, Uruguay.
+            </p>
+        </div>
+    
+        <!-- Svg -->
+
+        <!-- Star right -->
+        <img class="absolute scale-105 top-[25%] lg:right-[-1%] md:right-[-2%] right-[-5%] brightness-90 rotate-[-10deg] z-10" src="../../public/Star-home.svg" alt="">
+
+        <!-- Ellipse right -->
+        <img class="absolute top-[5%] right-[-30%] lg:right-[-20%] z-0" src="../../public/Ellipse-R.svg" alt="">
+        
+        <!-- Star left  -->
+        <img class="absolute bottom-[1%] sm:bottom-[2%] md:bottom-[0%] z-0" src="../../public/Star-home2.svg" alt="">
+
+        <!-- Star left stroke -->
+        <img class="absolute bottom-[1%] sm:bottom-[2%] md:bottom-[0%] z-30" src="../../public/Star-home2-stroke.svg" alt="">        
+    </section>
+
+    <!-- Social -->
+    <section class="flex flex-row h-auto py-[2%] gap-x-[5%] md:gap-x-[8%] flex-wrap items-center z-10 justify-center bg-primary">
+        <a class="font-geist tracking-tight sm:text-[18px] text-secondary border-2 px-2 sm:px-4 md:px-6 rounded-2xl" href="#">Linkedin</a>
+        
+        <a class="font-geist tracking-tight sm:text-[18px] text-secondary border-2 px-2 sm:px-4 md:px-6 rounded-2xl" href="#">Email</a>
+
+        <a class="font-geist tracking-tight sm:text-[18px] text-secondary border-2 px-2 sm:px-4 md:px-6 rounded-2xl" href="#">Resume</a>
+    </section>
+
+</main>
+
+
+
+<style>
+    main {
+        background-image: url("../../public/gradient-grain-dark.webp");
+    }
+
+    img {
+        pointer-events: none;
+    }
+
+    #stroke {
+        -webkit-text-stroke: 0.5px #fcfaf8;
+        color: transparent;
+    }
+
+    #stroke::selection {
+        -webkit-text-stroke: 0.5px #fcfaf8;
+    }
+
+    #underline {
+        text-decoration: #ED5B2B wavy underline 3px;
+    }
+</style>

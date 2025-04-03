@@ -1,14 +1,23 @@
+---
+import '@fontsource-variable/roboto';
+import "@fontsource-variable/geist";
+import '@fontsource-variable/playfair-display/wght-italic.css';
+import './src/styles/global.css' 
+---
+
 <!doctype html>
-<html lang="en">
+<html class="scroll-smooth" lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Portfolio</title>
 	</head>
-	<body>
-		<slot />
+	<body class="bg-bg overflow-x-hidden ">
+	
+		<slot />		
+		
 	</body>
 </html>
 
@@ -17,6 +26,8 @@
 	body {
 		margin: 0;
 		width: 100%;
-		height: 100%;
 	}
+
+	
 </style>
+
