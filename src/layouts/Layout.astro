@@ -6,7 +6,7 @@ import './src/styles/global.css'
 ---
 
 <!doctype html>
-<html class="scroll-smooth" lang="en">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -21,11 +21,14 @@ import './src/styles/global.css'
 	</body>
 </html>
 
-<style>
+<style is:global>
 	html,
 	body {
 		margin: 0;
 		width: 100%;
+	}
+	html{
+		scroll-behavior: smooth;
 	}
 </style>
 
