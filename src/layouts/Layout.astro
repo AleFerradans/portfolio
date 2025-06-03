@@ -2,7 +2,8 @@
 import '@fontsource-variable/roboto';
 import "@fontsource-variable/geist";
 import '@fontsource-variable/playfair-display/wght-italic.css';
-import './src/styles/global.css' 
+import '../styles/global.css'
+import Cursor from '../components/Cursor';
 ---
 
 <!doctype html>
@@ -10,18 +11,17 @@ import './src/styles/global.css'
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/public/icon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Portfolio</title>
 	</head>
 	<body class="bg-bg overflow-x-hidden ">
-	
-		<slot />		
-		
+		<slot />
+		<Cursor client:visible/>
 	</body>
 </html>
 
-<style is:global>
+<style>
 	html,
 	body {
 		margin: 0;
@@ -30,5 +30,15 @@ import './src/styles/global.css'
 	html{
 		scroll-behavior: smooth;
 	}
+
+	.masked-text {
+    position: absolute;
+    color: #ed5b2b;
+    clip-path: circle(var(--mask-size) at var(--mask-x) var(--mask-y));
+    -webkit-clip-path: circle(var(--mask-size) at var(--mask-x) var(--mask-y));
+    transition: clip-path 0.2s ease, -webkit-clip-path 0.2s ease;
+    pointer-events: none;
+    z-index: 50;
+  }
 </style>
 

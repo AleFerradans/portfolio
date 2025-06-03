@@ -1,0 +1,1 @@
+import{J as t,K as a,I as e}from"./create-visual-element.Dr9yAWND.js";import"./create-factory.Dr75_P4x.js";import"./index.BE-v4Olb.js";import"./jsx-runtime.D_zvdyIk.js";const i={renderer:e,...a,...t};var s=i;export{s as default};

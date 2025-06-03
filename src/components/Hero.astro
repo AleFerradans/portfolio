@@ -1,53 +1,104 @@
 ---
 import Header from './Header.astro'
+import {Button} from './ButtonSocial.tsx'
 ---
-<main class="flex flex-col justify-center gap-y-28 sm:gap-y-96 md:gap-y-30 lg:gap-y-36 2xl:gap-y-44 h-full relative overflow-hidden">
+<main id="home" class="flex flex-col justify-center gap-y-28 sm:gap-y-28 md:gap-y-30 h-[80vh] sm:h-[100vh] relative overflow-hidden">
     <Header/>
 
     <!-- Hero -->
     <section class="flex items-start flex-col flex-wrap gap-x-14 md:justify-center justify-start">
+        
+        <div class="box relative lg:pl-[8%] md:mb-10 pl-[8%]">
+            <h2 id="title" data-hover="true" class="font-roboto font-black text-secondary text-5xl sm:text-7xl lg:text-9xl md:text-8xl tracking-tight leading-0.5 selection:bg-transparent selection:text">Front <span class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-secondary font-medium font-playfair selection:bg-primary">end</span></h2>
+            <p data-hover="true" id="stroke" class="font-geist text-5xl sm:text-7xl lg:text-9xl md:text-8xl font-black selection:bg-transparent">Developer</p>
 
-        <div class="relative lg:pl-[8%] md:mb-10 pl-[8%]">
-            <h2 class="font-roboto font-black text-secondary text-5xl lg:text-9xl md:text-8xl tracking-tight leading-0.5 selection:bg-transparent selection:text">Front <span class="text-5xl lg:text-8xl md:text-8xl text-secondary font-medium font-playfair selection:bg-primary">end</span></h2>
-            <p id="stroke" class="font-geist text-5xl lg:text-9xl md:text-8xl font-black selection:bg-transparent">Developer</p>
-
-            <img class="absolute left-[84%] top-[-4%] md:left-[82%] md:top-0 md:scale-125 lg:top-0 lg:left-[75%] opacity-45 scale-95 lg:scale-150 z-30 rotate-12" src="../../public/Ilustracion1.svg" alt="">
+            <img id="illustration" class="absolute left-[84%] top-[-10%] md:left-[82%] md:top-0 md:scale-125 lg:top-0 lg:left-[75%] opacity-45 scale-105 sm:scale-105 lg:scale-150 rotate-12" src="../../public/Ilustracion1.svg" alt="">
         </div>
     
         <div class="w-auto md:w-[70%] md:ml-[30%] md:px-10 lg:w-[60%] lg:mt-5 lg:ml-[38%] px-[8%]">
-            <p class="font-geist text-lg md:text-2xl lg:text-2xl font-thin text-description mt-10 selection:bg-primary"> Hello there — I'm a <span id="underline" class="font-playfair font-normal text-primary text-lg lg:text-2xl lg:underline selection:text-secondary">creative front-end</span> developer based in Montevideo, Uruguay.
+            <p data-hover="true" class="font-geist text-lg sm:text-xl md:text-2xl  font-thin text-description mt-10 selection:bg-primary"> Hello there — I'm a <span data-hover="true" id="underline" class="font-playfair font-normal text-primary text-lg sm:text-xl md:text-2xl lg:underline selection:text-secondary">creative front-end</span> developer based in Montevideo, Uruguay.
             </p>
         </div>
+        
     
         <!-- Svg -->
 
         <!-- Star right -->
-        <img class="absolute scale-105 top-[25%] lg:right-[-1%] md:right-[-2%] right-[-5%] brightness-90 rotate-[-10deg] z-10" src="../../public/Star-home.svg" alt="">
+        <img id="starRight" class="absolute scale-75 sm:scale-125 top-[25%] lg:right-[-1%] md:right-[-2%] right-[-5%] brightness-90 rotate-[-10deg] z-10" src="../../public/Star-home.svg" alt="">
 
         <!-- Ellipse right -->
         <img class="absolute top-[5%] right-[-30%] lg:right-[-20%] z-0" src="../../public/Ellipse-R.svg" alt="">
         
         <!-- Star left  -->
-        <img class="absolute bottom-[1%] sm:bottom-[2%] md:bottom-[0%] z-0" src="../../public/Star-home2.svg" alt="">
+        <img id="starLeft" class="absolute scale-75 sm:scale-100 bottom-[1%] sm:bottom-[2%] md:bottom-[0%] z-0" src="../../public/Star-home2.svg" alt="">
 
         <!-- Star left stroke -->
-        <img class="absolute bottom-[1%] sm:bottom-[2%] md:bottom-[0%] z-30" src="../../public/Star-home2-stroke.svg" alt="">        
+        <img id="starLeftStroke" class="absolute scale-75 sm:scale-100 bottom-[1%] sm:bottom-[2%] md:bottom-[0%] z-30" src="../../public/Star-home2-stroke.svg" alt="">        
     </section>
 
     <!-- Social -->
-    <section class="flex flex-row h-auto py-[2%] gap-x-[5%] md:gap-x-[8%] flex-wrap items-center z-10 justify-center bg-primary">
-        <a class="font-geist tracking-tight sm:text-[18px] text-secondary border-2 px-2 sm:px-4 md:px-6 rounded-2xl" href="#">Linkedin</a>
-        
-        <a class="font-geist tracking-tight sm:text-[18px] text-secondary border-2 px-2 sm:px-4 md:px-6 rounded-2xl" href="#">Email</a>
+    <section class="absolute w-full bottom-0 flex flex-row h-auto py-[1%] gap-x-[5%] md:gap-x-[8%] flex-wrap items-center z-10 justify-center bg-primary">
 
-        <a class="font-geist tracking-tight sm:text-[18px] text-secondary border-2 px-2 sm:px-4 md:px-6 rounded-2xl" href="#">Resume</a>
+        <Button href="https://www.linkedin.com/in/alexisferradans/" client:visible>Linkedin</Button>
+
+        <Button href="https://github.com/AleFerradans" client:visible>Github</Button>
+
+        
     </section>
 
 </main>
+<script>
+    import { gsap } from "gsap";
+
+    gsap.from("#illustration",{
+        duration: 2,
+        rotate: 270,
+        scale:6,
+        y: -100,
+        x: -400,
+        opacity: 0,
+        ease: "elastic.out(1, .6)",
+        delay: 0.5
+    })
+
+    gsap.from("#starRight",{
+        duration: 1.3,
+        rotate: 133,
+        y: -100,
+        opacity: 0,
+        ease: "elastic.out(1, .6)",
+        delay: 0.2
+    })
+
+    gsap.from("#starLeft",{
+        duration: 1.3,
+        rotate: 133,
+        scale: 2,
+        y: 100,
+        x: 100,
+        opacity: 0,
+        ease: "elastic.out(1, .6)",
+        delay: 0.5
+    })
+
+    gsap.from("#starLeftStroke",{
+        duration: 1.4,
+        rotate: 188,
+        scale: 2,
+        y: 200,
+        x: 200,
+        opacity: 0,
+        ease: "elastic.out(1, .6)",
+        delay: 0.7
+    })
+
+    
+</script>
 
 
 
 <style>
+
     main {
         background-image: url("../../public/gradient-grain-dark.webp");
     }
@@ -68,4 +119,5 @@ import Header from './Header.astro'
     #underline {
         text-decoration: #ED5B2B wavy underline 3px;
     }
+
 </style>

@@ -1,10 +1,14 @@
+---
+import {Button} from './ButtonProject.tsx'
+---
+
 <!-- Container -->
-<main id="project" class="flex flex-col justify-center items-start pt-[20%] px-[%] sm:py-[10%] sm:px-[5%] md:py-[15%] md:px-[10%] bg-bg overflow-x-hidden h-full w-full relative ">
+<main id="project" class="flex flex-col justify-center items-start pt-[15%] sm:pt-[5%] xl:pt-[4%] px-[5%] sm:py-[5%] sm:px-[5%] md:py-[10%] md:px-[10%] lg:py-[10%] xl:py-[10%] bg-bg overflow-x-hidden h-full w-full relative ">
 
     <!--Title and Svg -->
     <section class="flex justify-start items-center">
         <h2 id="stroke" class="font-geist text-6xl md:text-7xl font-black selection:bg-transparent z-10">
-            My<br>
+            My
             work
         </h2>
         
@@ -14,19 +18,117 @@
     <!-- Box Projects -->
     <section class="flex flex-col items-center justify-center md:my-[12%] my-[18%] gap-y-20 md:gap-y-44 w-full h-full">
 
-        <!-- === PROJECT CARD 1 === -->
-        <article class="flex justify-center relative md:flex-row flex-col items-center w-full 
-        md:gap-y-[5%] md:justify-start md:items-center
-        xl:flex-col xl:justify-center xl:items-center xl:gap-x-[0%] xl:w-[70%] pb-[5%] h-auto   selection:bg-primary border-b-[1px] border-description ">
+        
+        
+        <!--  === PROJECT CARD 1 === --> 
+        <article class="flex justify-center relative md:flex-row flex-col items-center w-full sm:w-[80%]
+        md:gap-y-[5%] md:gap-x-[10%] md:justify-start md:items-center md:w-full
+        xl:justify-start xl:items-center pb-[5%] h-auto selection:bg-primary border-b-[1px] border-description ">
 
             <!-- Box Left -->
             <aside class="flex flex-col justify-center md:justify-start gap-y-5 sm:items-start
-            md:gap-y-5 md:mb-5 md:w-[50%]">
+            md:gap-y-5 md:mb-5 sm:w-[90%] md:w-[50%]">
                 <!-- Title -->
-                <div class="flex flex-col w-full">
+                <div data-hover="true" id="description" class="flex flex-col w-full">
                     
-                    <h3 class="font-geist font-medium xl:text-4xl md:text-3xl text-[25px] text-secondary tracking-normal z-10">Inventory Managment 
-                    </h3>
+                    <a href="https://deco-wood-project.vercel.app/" target="_blank" class="font-geist font-medium xl:text-4xl md:text-3xl text-[25px] text-secondary tracking-normal z-10 text-center sm:text-left">Deco Wood
+                    </a>
+                
+                    <!-- Description -->
+                    <p class="text-description font-thin hidden sm:flex sm:text-lg md:text-[20px] xl:text-[23px] tracking-wider w-full xl:w-[52%]">Landing Page</p>
+                </div>
+
+                <!-- Tech Stack -->
+                <div class="hidden sm:flex sm:flex-row xl:gap-x-2 md:gap-x-1 sm:gap-x-0 items-start justify-start">
+                    <img src="../../public/Astro.svg" alt="Astro Logo" class="xl:scale-75 md:scale-[65%] scale-60 opacity-65">
+                    <img src="../../public/Tailwind.svg" alt="Tailwind Logo" class="xl:scale-75 md:scale-[65%] scale-60 opacity-65">
+                </div>
+
+                <!-- Link -->
+                <div class="flex flex-row flex-wrap items-center xl:h-auto justify-start gap-x-4 gap-y-4">
+                    
+                    <Button href="https://deco-wood-project.vercel.app/" client:visible>View Project
+                        
+                    </Button>
+
+                    <Button href="https://github.com/AleFerradans/DecoWood_project" client:visible>View Github
+                        
+                    </Button>
+                </div>
+            </aside>
+                
+            <!-- Picture -->
+            <a id="image" href="http://" target="_blank" rel="noopener noreferrer" class="flex justify-center items-center rounded-2xl md:mt-0 mt-10
+            md:right-0 md:w-[42%] md:h-65 w-[90%] h-62
+            xl:w-[40%] relative hover:scale-105  transition-all duration-400 ease-in-out">
+                <img src="../../public/Deco-Wood.webp" alt="Inventory Managment" class=" w-full object-cover rounded-2xl z-20 brightness-75 h-full ">
+                <p class="absolute z-0 top-[-12%] right-[-3%] md:top-[-15%] md:right-[-5%] rotate-12 lg:right-[-5%] lg:top-[-15%] font-geist text-4xl md:text-5xl lg:text-5xl  font-extralight text-primary selection:bg-primary selection:text-secondary">(01)</p>
+            </a>
+        
+            
+        </article>
+
+        <!-- === PROJECT CARD 2 === -->
+        <article class="flex justify-center relative md:flex-row flex-col items-center w-full sm:w-[80%]
+        md:gap-y-[5%] md:gap-x-[10%] md:justify-start md:items-center md:w-full
+        xl:justify-start xl:items-center pb-[5%] h-auto selection:bg-primary border-b-[1px] border-description ">
+
+            <!-- Box Left -->
+            <aside class="flex flex-col justify-center md:justify-start gap-y-5 sm:items-start
+            md:gap-y-5 md:mb-5 sm:w-[90%] md:w-[50%]">
+                <!-- Title -->
+                <div data-hover="true" id="description2" class="flex flex-col w-full">
+                    
+                    <a href="https://projectclonenx.vercel.app/" target="_blank" class="font-geist font-medium xl:text-4xl md:text-3xl text-[25px] text-secondary tracking-normal z-10 text-center sm:text-left">Netflix Clone
+                    </a>
+                
+                    <!-- Description -->
+                    <p class="text-description font-thin hidden sm:flex sm:text-lg md:text-[20px] xl:text-[23px] tracking-wider w-full xl:w-[52%]">Clone of landing page of Netflix</p>
+                </div>
+
+                <!-- Tech Stack -->
+                <div class="hidden sm:flex sm:flex-row xl:gap-x-2 md:gap-x-1 sm:gap-x-0 items-start justify-start">
+                    <img src="../../public/Astro.svg" alt="" class="xl:scale-75 md:scale-[65%] scale-60 opacity-65">
+                    <img src="../../public/Tailwind.svg" alt="" class="xl:scale-75 md:scale-[65%] scale-60 opacity-65">
+                </div>
+
+                <!-- Link -->
+                <div class="flex flex-row flex-wrap items-center xl:h-auto justify-start gap-x-4 gap-y-4">
+                    
+                    <Button href="https://projectclonenx.vercel.app/" client:visible>View Project
+                        
+                    </Button>
+
+                    <Button href="https://github.com/AleFerradans/Netflix-clone" client:visible>View Github
+                        
+                    </Button>
+                </div>
+            </aside>
+                
+            <!-- Picture -->
+            <a id="image2" href="http://" target="_blank" rel="noopener noreferrer" class="flex justify-center items-center rounded-2xl md:mt-0 mt-10
+            md:right-0 md:w-[42%] md:h-65 w-[90%] h-62
+            xl:w-[40%] relative hover:scale-105  transition-all duration-400 ease-in-out">
+                <img src="../../public/NetflixClone.webp" alt="Inventory Managment" class=" w-full object-cover rounded-2xl z-20 brightness-75 h-full ">
+                <p class="absolute z-0 top-[-12%] right-[-3%] md:top-[-15%] md:right-[-5%] rotate-12 lg:right-[-5%] lg:top-[-15%] font-geist text-4xl md:text-5xl lg:text-5xl  font-extralight text-primary selection:bg-primary selection:text-secondary">(02)</p>
+            </a>
+        
+            
+        </article>
+
+        <!-- === PROJECT CARD 3 === -->
+        <article class="flex justify-center relative md:flex-row flex-col items-center w-full sm:w-[80%]
+        md:gap-y-[5%] md:gap-x-[10%] md:justify-start md:items-center md:w-full
+        xl:justify-start xl:items-center pb-[5%] h-auto selection:bg-primary border-b-[1px] border-description ">
+
+            <!-- Box Left -->
+            <aside class="flex flex-col justify-center md:justify-start gap-y-5 sm:items-start
+            md:gap-y-5 md:mb-5 sm:w-[90%] md:w-[50%]">
+                <!-- Title -->
+                <div id="description3" data-hover="true" class="flex flex-col w-full">
+                    
+                    <a  class="font-geist font-medium xl:text-4xl md:text-3xl text-[25px] text-secondary tracking-normal z-10 text-center sm:text-left">Inventory Managment <span class="text-description font-light hidden sm:flex sm:text-lg md:text-[20px] xl:text-[23px] tracking-wider">(En desarrollo...)</span>
+                    </a>
                 
                     <!-- Description -->
                     <p class="text-description font-thin hidden sm:flex sm:text-lg md:text-[20px] xl:text-[23px] tracking-wider w-full xl:w-[52%]">Minimalist inventory management website</p>
@@ -40,78 +142,24 @@
                 </div>
 
                 <!-- Link -->
-                <div class="flex flex-row flex-wrap items-center xl:h-auto justify-start gap-x-4">
+                <!-- <div class="flex flex-row flex-wrap items-center xl:h-auto justify-start gap-x-4 gap-y-4">
                     
-                    <a href="http://" target="_blank" rel="noopener noreferrer" class="flex flex-row justify-center items-center py-1 px-4 mb-[8%] xl:mb-0 gap-x-2 border-[1px] border-description rounded-4xl w-auto">
-                        <p class="text-secondary font-roboto font-light xl:text-2xl text-sm">View Project 
-                        </p>
-                        <img src="../../public/Arrow-project.svg" alt="" class=" bg-primary p-1 sm:p-1 scale-70 md:scale-90">
-                    </a>
-                    <a href="http://" target="_blank" rel="noopener noreferrer" class="flex flex-row justify-center items-center py-1 px-4 mb-[8%] xl:mb-0 gap-x-2 border-[1px] border-description rounded-4xl w-auto">
-                        <p class="text-secondary font-roboto font-light xl:text-2xl text-sm">View Github 
-                        </p>
-                        <img src="../../public/Arrow-project.svg" alt="" class=" bg-primary p-1 sm:p-1 scale-70 md:scale-90">
-                    </a>
-                </div>
+                    <Button href="https://www.linkedin.com/in/alexisferradans/" client:visible>View Project
+                        
+                    </Button>
+
+                    <Button href="https://www.linkedin.com/in/alexisferradans/" client:visible>View Github
+                        
+                    </Button>
+                </div> -->
             </aside>
                 
             <!-- Picture -->
-            <a href="http://" target="_blank" rel="noopener noreferrer" class="flex justify-center items-center rounded-2xl
-            md:absolute md:right-0 md:w-[42%] md:h-[80%] w-[90%]
-            xl:w-[40%] xl:h-full h-48 relative">
-                <img src="../../public/Elebesa-app.webp" alt="Inventory Managment" class=" w-full h-full object-cover rounded-2xl z-20 brightness-75">
-                <p class="absolute z-0 top-[-15%] right-[-3%] md:top-[-15%] md:right-[-10%] rotate-12 xl:right-[-5%] xl:top-[-12%] font-geist text-3xl md:text-5xl font-extralight text-primary selection:bg-primary selection:text-secondary">(01)</p>
-            </a>
-        
-            
-        </article>
-        
-        <!--  === PROJECT CARD 2 === --> 
-        <article class="flex justify-center relative md:flex-row flex-col items-center w-full 
-        md:gap-y-[5%] md:justify-start md:items-center
-        xl:flex-col xl:justify-center xl:items-center xl:gap-x-[0%] xl:w-[70%] pb-[5%] h-auto   selection:bg-primary border-b-[1px] border-description ">
-
-            <!-- Box Left -->
-            <aside class="flex flex-col justify-center md:justify-start gap-y-5 sm:items-start
-            md:gap-y-5 md:mb-5 md:w-[50%]">
-                <!-- Title -->
-                <div class="flex flex-col w-[85%]">
-                    
-                    <h3 class="font-geist font-medium xl:text-4xl md:text-3xl text-[25px] text-secondary tracking-normal z-10">Deco Wood 
-                    </h3>
-                
-                    <!-- Description -->
-                    <p class="text-description font-thin hidden sm:flex sm:text-lg md:text-[20px] xl:text-[23px] tracking-wider w-full xl:w-[52%]">Landing page</p>
-                </div>
-
-                <!-- Tech Stack -->
-                <div class="hidden sm:flex sm:flex-row xl:gap-x-2 md:gap-x-1 sm:gap-x-0 items-start justify-start">
-                    <img src="../../public/Astro.svg" alt="" class="xl:scale-75 md:scale-[65%] scale-60 opacity-65">
-                    <img src="../../public/Tailwind.svg" alt="" class="xl:scale-75 md:scale-[65%] scale-60 opacity-65">
-                </div>
-
-                <!-- Link -->
-                <div class="flex flex-row flex-wrap items-center xl:h-auto justify-start gap-x-4">
-                    
-                    <a href="http://" target="_blank" rel="noopener noreferrer" class="flex flex-row justify-center items-center py-1 px-4 mb-[8%] xl:mb-0 gap-x-2 border-[1px] border-description rounded-4xl w-auto">
-                        <p class="text-secondary font-roboto font-light xl:text-2xl text-sm">View Project 
-                        </p>
-                        <img src="../../public/Arrow-project.svg" alt="" class=" bg-primary p-1 sm:p-1 scale-70 md:scale-90">
-                    </a>
-                    <a href="http://" target="_blank" rel="noopener noreferrer" class="flex flex-row justify-center items-center py-1 px-4 mb-[8%] xl:mb-0 gap-x-2 border-[1px] border-description rounded-4xl w-auto">
-                        <p class="text-secondary font-roboto font-light xl:text-2xl text-sm">View Github 
-                        </p>
-                        <img src="../../public/Arrow-project.svg" alt="" class=" bg-primary p-1 sm:p-1 scale-70 md:scale-90">
-                    </a>
-                </div>
-            </aside>
-                
-            <!-- Picture -->
-            <a href="http://" target="_blank" rel="noopener noreferrer" class="flex justify-center items-center rounded-2xl
-            md:absolute md:right-0 md:w-[42%] md:h-[80%] w-[90%]
-            xl:w-[40%] xl:h-full h-48 relative">
-                <img src="../../public/Deco-Wood.webp" alt="Inventory Managment" class="w-full h-full object-cover rounded-2xl z-20 brightness-75">
-                <p class="absolute z-0 top-[-15%] right-[-3%] md:top-[-15%] md:right-[-10%] rotate-12 xl:right-[-5%] xl:top-[-12%] font-geist text-3xl md:text-5xl font-extralight text-primary selection:bg-primary selection:text-secondary">(02)</p>
+            <a id="image3" class="flex justify-center items-center rounded-2xl md:mt-0 mt-10
+            md:right-0 md:w-[45%] w-[90%]
+            xl:w-[40%] h-62 relative hover:scale-105  transition-all duration-400 ease-in-out">
+                <img  src="../../public/Elebesa-app.webp" alt="Inventory Managment" class=" w-full h-full object-cover rounded-2xl z-20 brightness-75">
+                <p class="absolute z-0 top-[-12%] right-[-3%] md:top-[-15%] md:right-[-5%] rotate-12 lg:right-[-5%] lg:top-[-15%] font-geist text-4xl md:text-5xl lg:text-5xl font-extralight text-primary selection:bg-primary selection:text-secondary">(03)</p>
             </a>
         
             
@@ -120,6 +168,63 @@
     </section>
 
 </main>
+
+<script>
+    import { gsap } from "gsap";
+
+    // Project 1
+    let text = document.getElementById("description");
+    
+    let animation = gsap.to("#image", {
+        paused: true,
+        opacity: 0.6,
+        scale: 1.05,
+        rotate: 1.2,
+        duration: 0.2,
+        ease: "power1.inOut",
+    });
+    
+    if (text) {
+        text.addEventListener("mouseenter", () => animation.play());
+        text.addEventListener("mouseleave", () => animation.reverse());
+    }
+
+    // Project 2
+
+    let text2 = document.getElementById("description2");
+    
+    let animation2 = gsap.to("#image2", {
+        paused: true,
+        opacity: 0.6,
+        scale: 1.05,
+        rotate: 1.2,
+        duration: 0.2,
+        ease: "power1.inOut",
+    });
+    
+    if (text2) {
+        text2.addEventListener("mouseenter", () => animation2.play());
+        text2.addEventListener("mouseleave", () => animation2.reverse());
+    }
+
+    // Project 3
+
+    let text3 = document.getElementById("description3");
+    
+    let animation3 = gsap.to("#image3", {
+        paused: true,
+        opacity: 0.6,
+        scale: 1.05,
+        rotate: 1.2,
+        duration: 0.2,
+        ease: "power1.inOut",
+    });
+    
+    if (text3) {
+        text3.addEventListener("mouseenter", () => animation3.play());
+        text3.addEventListener("mouseleave", () => animation3.reverse());
+    }
+</script>
 
 <style>
     #stroke {
