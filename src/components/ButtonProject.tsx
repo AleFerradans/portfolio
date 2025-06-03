@@ -141,7 +141,7 @@ export const Button = ({ children, href }: ButtonProps) => {
       <div className="relative overflow-hidden">
         <motion.img
           variants={iconVariant}
-          src="../../public/Arrow-project.svg"
+          src="/Arrow-project.svg"
           alt="Arrow icon"
           className=" bg-transparent p-1 sm:p-1 scale-70 md:scale-90"
         ></motion.img>
@@ -149,7 +149,7 @@ export const Button = ({ children, href }: ButtonProps) => {
         <motion.img
           variants={secondIconVariant}
           aria-hidden
-          src="../../public/Arrow-project.svg"
+          src="/Arrow-project.svg"
           alt="Arrow icon"
           className="absolute top-0 left-0 bg-primary p-1 sm:p-1 scale-70 md:scale-90"
         ></motion.img>
